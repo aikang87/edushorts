@@ -1,0 +1,7 @@
+user@PC:~$ docker compose down
+ Container myweb-web-1 Stopping 
+ Container myweb-web-1 Stopped 
+ Container myweb-web-1 Removing 
+ Container myweb-web-1 Removed 
+ Network myweb_default Removing 
+ Network myweb_default Removed 

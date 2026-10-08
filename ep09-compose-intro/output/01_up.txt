@@ -1,0 +1,7 @@
+user@PC:~$ docker compose up -d
+ Network myweb_default Creating 
+ Network myweb_default Created 
+ Container myweb-web-1 Creating 
+ Container myweb-web-1 Created 
+ Container myweb-web-1 Starting 
+ Container myweb-web-1 Started 

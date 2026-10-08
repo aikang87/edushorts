@@ -1,0 +1,3 @@
+user@PC:~$ docker compose ps
+NAME          IMAGE          COMMAND                  SERVICE   CREATED         STATUS         PORTS
+myweb-web-1   nginx:alpine   "/docker-entrypoint.…"   web       4 seconds ago   Up 3 seconds   0.0.0.0:8080->80/tcp
