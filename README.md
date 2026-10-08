@@ -22,11 +22,11 @@
 | 13 | 문제 해결과 청소 | `ep13-troubleshoot-cleanup` | 제작 완료 |
 | 14 | 내 이미지 공유하기 | `ep14-share-image` | 제작 완료 (Docker Hub 로그인/푸시는 미검증, 로컬 레지스트리로 시연) |
 | 15 | 이미지 다이어트: 멀티스테이지 | `ep15-multistage` | 제작 완료 |
-| 16 | VSCode 설치 및 필수 확장 세팅 | `ep16-vscode` | 기존 (자료 자리만) |
-| 17 | Docker로 ML 개발환경 ① | `ep17-ml-env-1` | 기존 (자료 자리만) |
+| 16 | VSCode 설치 및 필수 확장 세팅 | `ep16-vscode` | 제작 완료 (VSCode 화면 일러스트 포함, 문서 참고) |
+| 17 | Docker로 ML 개발환경 ① | `ep17-ml-env-1` | 제작 완료 |
 | 18 | Docker로 ML 개발환경 ② | `ep18-ml-env-2` | 기존 (자료 자리만) |
-| 19 | Docker + Ollama | `ep19-ollama` | **일부 미검증 초안** (서버 실행/응답/목록은 실제 실행, 모델 다운로드·대화·GPU 슬라이드는 명령만 표시) |
-| 20 | Docker + ComfyUI | `ep20-comfyui` | **미제작** (제작 계획서만, 검증 불가 항목과 필요 조건 정리) |
+| 19 | Ollama 명령어 | `ep19-ollama-cli` | 제작 완료 (모델은 ollama pull 대신 GGUF 를 create 로 등록) |
+| 20 | 내 앱에 LLM 연결 (Compose + Ollama API) | `ep20-llm-app` | 제작 완료 (19회차와 같은 모델 준비 방식) |
 
 ## 회차 폴더 구성
 
@@ -50,6 +50,9 @@ node build.js                      # PPT + script.txt 생성 (실제 출력이 �
 
 ## 제작 환경 제약 (검증 범위에 영향)
 
-- 빌드 컨테이너 DNS 차단: `RUN apk add`, `pip install` 등 빌드 중 네트워크 설치는 검증 불가 → 표준 라이브러리/네트워크 불필요 예제 사용
-- Docker Hub 익명 요청 제한(429)이 간헐적으로 발생 → 각 `commands.sh` 가 재시도
-- `ollama.com`, `registry.ollama.ai`, `huggingface.co` 접속 차단 → 19~20회차의 모델 다운로드 단계는 허용 후 검증 필요
+- 빌드 컨테이너 DNS 차단: `RUN apk add` 등은 그대로는 검증 불가. `RUN pip install` 은 `tools/verify-base.sh`(프록시 CA 가 든 로컬 기반 이미지) + `docker build --network host` 로 검증 (17회차, 문서 참고). 표준 라이브러리/네트워크 불필요 예제는 그대로 검증
+- Docker Hub 익명 요청 제한(100회/시간, 429)이 간헐적으로 발생 → 각 `commands.sh` 가 재시도. 가능하면 이미지를 미리 받아 두고 불필요한 build/pull 반복을 피할 것
+- `ollama.com`, `registry.ollama.ai`, `huggingface.co`, VSCode 다운로드/마켓플레이스 접속 차단 → `ollama pull` 실행 불가(19~20회차는 Docker Hub 의 `ai/smollm2` GGUF 를 `ollama create` 로 등록해 검증), VSCode 실제 화면 캡처 불가(16회차 일러스트)
+- 회차 폴더의 `script.md` 에 각 회차의 검증 범위와 표시용 편집 내역이 있음
+- 18회차: 기존 콘텐츠 자리(`ep18-ml-env-2`)만 있음. 1회차도 동일
+- 20회차는 원래 ComfyUI 계획이었으나 폐기하고 LLM(Ollama) 내용으로 변경

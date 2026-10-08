@@ -1,0 +1,4 @@
+user@PC:~$ docker compose run --rm chat python chat.py "What is Docker? Answer in one short sentence."
+ Container llmapp-chat-run-b791beb33d6d Creating
+ Container llmapp-chat-run-b791beb33d6d Created
+Docker is a containerization platform that allows developers to package, ship, and run applications in isolated environments.

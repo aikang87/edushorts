@@ -1,0 +1,9 @@
+user@PC:~$ docker compose up -d
+ Network llmapp_default Creating
+ Volume llmapp_ollama Creating
+ Volume llmapp_ollama Created
+ Network llmapp_default Created
+ Container llmapp-ollama-1 Creating
+ Container llmapp-ollama-1 Created
+ Container llmapp-ollama-1 Starting
+ Container llmapp-ollama-1 Started
