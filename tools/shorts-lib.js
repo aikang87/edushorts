@@ -54,7 +54,7 @@ function terminal(s, { lines, label, tone = "pink", tab = "terminal", fontSize =
   const lh = LINE_H / 72;
   lines.forEach((ln, i) => {
     const y = ty + i * lh;
-    const m = ln.t.match(/^(user@PC:~\$ )(.*)$/);
+    const m = ln.t.match(/^(user@PC:[^$ ]*\$ )(.*)$/); // user@PC:~$ 또는 user@PC:~/폴더$
     const runs = m
       ? [{ text: m[1], options: { color: C.green, bold: true } }, { text: m[2], options: { color: C.text } }]
       : [{ text: ln.t, options: { color: ln.dim ? C.dim : C.text } }];

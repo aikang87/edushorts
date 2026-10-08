@@ -1,0 +1,30 @@
+user@PC:~$ docker build -t hello .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 116B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/alpine:latest
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM docker.io/library/alpine:latest@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6
+#4 resolve docker.io/library/alpine:latest@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6 0.0s done
+#4 CACHED
+
+#5 [2/2] RUN echo "Hello Dockerfile" > /hello.txt
+#5 DONE 0.2s
+
+#6 exporting to image
+#6 exporting layers 0.0s done
+#6 exporting manifest sha256:a193100d786a6e7dff296dafe92fae3bf40ef852e7e04a980b6f82e2181cd69f done
+#6 exporting config sha256:450721bbeb87acbfc65f62090f063652f4f11d0a3f0f9a83139cdf117e3c1c53 done
+#6 exporting attestation manifest sha256:bd82bfc487f13be563a0fe12c70b3fdfa4ad638ee76b06513972c27809d8b7a3 0.0s done
+#6 exporting manifest list sha256:a2efb18b426b0f13d95222c93c96e378c65106076aef0831c31476216825315c done
+#6 naming to docker.io/library/hello:latest done
+#6 unpacking to docker.io/library/hello:latest 0.0s done
+#6 DONE 0.1s

@@ -1,0 +1,3 @@
+user@PC:~$ docker images hello
+IMAGE          ID             DISK USAGE   CONTENT SIZE   EXTRA
+hello:latest   a2efb18b426b       12.9MB         3.85MB        

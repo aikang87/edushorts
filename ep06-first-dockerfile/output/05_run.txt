@@ -1,0 +1,2 @@
+user@PC:~$ docker run --rm hello
+Hello Dockerfile
