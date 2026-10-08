@@ -1,0 +1,2 @@
+user@PC:~$ docker stop e59f
+e59f

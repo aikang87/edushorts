@@ -1,0 +1,2 @@
+user@PC:~$ docker start web
+web

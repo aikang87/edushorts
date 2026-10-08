@@ -1,0 +1,60 @@
+user@PC:~$ docker logs web
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: info: ipv6 not available
+/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+2026/10/08 06:23:22 [notice] 1#1: using the "epoll" event method
+2026/10/08 06:23:22 [notice] 1#1: nginx/1.31.6
+2026/10/08 06:23:22 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+2026/10/08 06:23:22 [notice] 1#1: OS: Linux 6.18.44-fc-v80
+2026/10/08 06:23:22 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 20000:20000
+2026/10/08 06:23:22 [notice] 1#1: start worker processes
+2026/10/08 06:23:22 [notice] 1#1: start worker process 20
+2026/10/08 06:23:22 [notice] 1#1: start worker process 21
+2026/10/08 06:23:22 [notice] 1#1: start worker process 22
+2026/10/08 06:23:22 [notice] 1#1: start worker process 23
+2026/10/08 06:23:25 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2026/10/08 06:23:25 [notice] 20#20: gracefully shutting down
+2026/10/08 06:23:25 [notice] 20#20: exiting
+2026/10/08 06:23:25 [notice] 21#21: gracefully shutting down
+2026/10/08 06:23:25 [notice] 21#21: exiting
+2026/10/08 06:23:25 [notice] 22#22: gracefully shutting down
+2026/10/08 06:23:25 [notice] 22#22: exiting
+2026/10/08 06:23:25 [notice] 20#20: exit
+2026/10/08 06:23:25 [notice] 21#21: exit
+2026/10/08 06:23:25 [notice] 22#22: exit
+2026/10/08 06:23:25 [notice] 23#23: gracefully shutting down
+2026/10/08 06:23:25 [notice] 23#23: exiting
+2026/10/08 06:23:25 [notice] 23#23: exit
+2026/10/08 06:23:25 [notice] 1#1: signal 17 (SIGCHLD) received from 20
+2026/10/08 06:23:25 [notice] 1#1: worker process 20 exited with code 0
+2026/10/08 06:23:25 [notice] 1#1: signal 29 (SIGIO) received
+2026/10/08 06:23:25 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2026/10/08 06:23:25 [notice] 1#1: worker process 21 exited with code 0
+2026/10/08 06:23:25 [notice] 1#1: worker process 23 exited with code 0
+2026/10/08 06:23:25 [notice] 1#1: signal 29 (SIGIO) received
+2026/10/08 06:23:25 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2026/10/08 06:23:25 [notice] 1#1: worker process 22 exited with code 0
+2026/10/08 06:23:25 [notice] 1#1: exit
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: info: ipv6 not available
+/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+2026/10/08 06:23:27 [notice] 1#1: using the "epoll" event method
+2026/10/08 06:23:27 [notice] 1#1: nginx/1.31.6
+2026/10/08 06:23:27 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+2026/10/08 06:23:27 [notice] 1#1: OS: Linux 6.18.44-fc-v80
+2026/10/08 06:23:27 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 20000:20000
+2026/10/08 06:23:27 [notice] 1#1: start worker processes
+2026/10/08 06:23:27 [notice] 1#1: start worker process 20
+2026/10/08 06:23:27 [notice] 1#1: start worker process 21
+2026/10/08 06:23:27 [notice] 1#1: start worker process 22
+2026/10/08 06:23:27 [notice] 1#1: start worker process 23

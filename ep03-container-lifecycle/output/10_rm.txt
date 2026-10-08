@@ -1,0 +1,2 @@
+user@PC:~$ docker rm e59f
+e59f
