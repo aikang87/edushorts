@@ -20,7 +20,7 @@ run() {
 
 DIR="$HOME/hello"
 cleanup() {
-  docker rm -f registry >/dev/null 2>&1
+  docker rm -fv registry >/dev/null 2>&1
   docker rmi hello localhost:5000/hello:1.0 >/dev/null 2>&1
   rm -f "$DIR/Dockerfile"; rmdir "$DIR" 2>/dev/null
 }

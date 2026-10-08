@@ -1,0 +1,2 @@
+user@PC:~$ docker exec ollama ollama list
+NAME    ID    SIZE    MODIFIED 

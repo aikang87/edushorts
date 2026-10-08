@@ -1,0 +1,2 @@
+user@PC:~$ curl localhost:11434
+Ollama is running
