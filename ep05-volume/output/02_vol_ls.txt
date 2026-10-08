@@ -1,0 +1,3 @@
+user@PC:~$ docker volume ls
+DRIVER    VOLUME NAME
+local     mydata

@@ -1,0 +1,2 @@
+user@PC:~$ docker run --rm -v mydata:/data nginx:alpine cat /data/hello.txt
+hello

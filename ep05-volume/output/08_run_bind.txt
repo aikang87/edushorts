@@ -1,0 +1,2 @@
+user@PC:~$ docker run -d --name web -p 8080:80 -v ~/site:/usr/share/nginx/html nginx:alpine
+ff15114107e4bda21f0a94f2797b86d48e104e2098a52fcc9a722f680e564e2e

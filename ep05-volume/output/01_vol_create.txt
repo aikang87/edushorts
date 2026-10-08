@@ -1,0 +1,2 @@
+user@PC:~$ docker volume create mydata
+mydata

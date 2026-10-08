@@ -1,0 +1,1 @@
+user@PC:~$ docker run --rm -v mydata:/data nginx:alpine sh -c 'echo hello > /data/hello.txt'

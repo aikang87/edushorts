@@ -84,6 +84,28 @@ function pickColumns(lines, keep) {
   return rows.map((r) => r.map((v, j) => (j === r.length - 1 ? v : v.padEnd(widths[j] + 3))).join(""));
 }
 
+
+// 브라우저 프레임(주소창) + 실제 캡처 이미지. aspect = 캡처 가로/세로, y 기본값은 화면영역 세로 중앙
+function browserFrame(s, { path, url, aspect, y, altText }) {
+  const x = 0.35, w = 4.9, barH = 0.42, imgH = w / aspect;
+  const top = y ?? R.screen.y + (R.screen.h - (barH + imgH)) / 2;
+  s.addShape("roundRect", { x, y: top, w, h: barH + imgH, rectRadius: 0.08, fill: { color: "FFFFFF" }, line: { color: C.edge, width: 1 }, objectName: "브라우저프레임" });
+  s.addShape("rect", { x: x + 0.02, y: top + 0.02, w: w - 0.04, h: barH - 0.02, fill: { color: "E8EAED" }, line: { color: "E8EAED", width: 0.25 }, objectName: "주소창영역" });
+  s.addShape("roundRect", { x: x + 0.15, y: top + 0.07, w: w - 0.3, h: 0.28, rectRadius: 0.14, fill: { color: "FFFFFF" }, line: { color: "D0D3D8", width: 0.5 }, objectName: "주소창" });
+  s.addText(url, { x: x + 0.3, y: top + 0.07, w: w - 0.6, h: 0.28, fontFace: "Arial", fontSize: 12, color: "202124", valign: "middle", margin: 0, isTextBox: true });
+  s.addImage({ path, x: x + 0.02, y: top + barH, w: w - 0.04, h: imgH - 0.02, altText: altText || `${url} 브라우저 화면` });
+}
+
+// 터미널 폭에 맞춰 공백 기준으로 줄바꿈 (실제 터미널의 자동 줄바꿈처럼)
+function wrapLine(t, n) {
+  const out = []; let cur = "";
+  for (const word of t.split(" ")) {
+    if ((cur + " " + word).trim().length > n && cur) { out.push(cur); cur = word; } else cur = (cur ? cur + " " : "") + word;
+  }
+  if (cur) out.push(cur);
+  return out;
+}
+
 const trunc = (t, n) => (t.length > n ? t.slice(0, n) + "…" : t);
 
-module.exports = { newDeck, baseSlide, terminal, readOut, pickColumns, trunc, C, F, R, SERIES_TITLE };
+module.exports = { newDeck, baseSlide, terminal, readOut, pickColumns, trunc, browserFrame, wrapLine, C, F, R, SERIES_TITLE };

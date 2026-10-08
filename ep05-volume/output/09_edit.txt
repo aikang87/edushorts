@@ -1,0 +1,1 @@
+user@PC:~$ echo "<h1>Hello Volume</h1>" > ~/site/index.html

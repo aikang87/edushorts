@@ -1,0 +1,2 @@
+user@PC:~$ docker run --rm nginx:alpine cat /data/hello.txt
+cat: can't open '/data/hello.txt': No such file or directory
