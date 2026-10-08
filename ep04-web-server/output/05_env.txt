@@ -1,0 +1,2 @@
+user@PC:~$ docker run --rm -e MY_NAME=Docker nginx:alpine printenv MY_NAME
+Docker
