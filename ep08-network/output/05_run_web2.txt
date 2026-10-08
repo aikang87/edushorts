@@ -1,0 +1,2 @@
+user@PC:~$ docker run -d --name web2 nginx:alpine
+d11b58981a3ee8a0aef3a4e54384be080524b6a6b2ab658890758ad30131df9e

@@ -1,0 +1,2 @@
+user@PC:~$ docker network create mynet
+64e0868628759315dd6fc348beffd4c8e18dc90ef23e4f1ae0c2faa4739f7bbb

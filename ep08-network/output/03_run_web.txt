@@ -1,0 +1,2 @@
+user@PC:~$ docker run -d --name web --network mynet nginx:alpine
+230e320b444ea950fd79385b1b0b2a58c7554cdad44eef32b45ba74eeb085c2e
