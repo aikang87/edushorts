@@ -1,0 +1,54 @@
+user@PC:~$ docker compose up -d
+ Image visits-web Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 462B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 113B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.12-alpine
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 711B done
+#5 DONE 0.0s
+
+#6 [1/3] FROM docker.io/library/python:3.12-alpine@sha256:1b668429b3511ab407d8e00648891631b0b1a4d7e15e3ca70f38ab5b91ad4ab4
+#6 resolve docker.io/library/python:3.12-alpine@sha256:1b668429b3511ab407d8e00648891631b0b1a4d7e15e3ca70f38ab5b91ad4ab4 0.0s done
+#6 DONE 0.0s
+
+#7 [2/3] WORKDIR /app
+#7 CACHED
+
+#8 [3/3] COPY app.py .
+#8 DONE 0.0s
+
+#9 exporting to image
+#9 exporting layers 0.0s done
+#9 exporting manifest sha256:fde4c50558bdc4e645226b14cb4d5d63c15fb38b17d1528164ec4a1fca1e18d7 done
+#9 exporting config sha256:141073115cdcbce15a0ee31bebb3133ab5cdd9c55052816ab3632a00006c74b7 done
+#9 exporting attestation manifest sha256:7b90a6e544c95dc4f7e7bfc4c04638e4c8a121b21a3d746d815440cd24a43331 done
+#9 exporting manifest list sha256:58c0880143112c3cfa270894743df8c89e166c57219dcf90c1990ec26a3d7c30 done
+#9 naming to docker.io/library/visits-web:latest done
+#9 unpacking to docker.io/library/visits-web:latest 0.0s done
+#9 DONE 0.1s
+
+#10 resolving provenance for metadata file
+#10 DONE 0.0s
+ Image visits-web Built 
+ Network visits_default Creating 
+ Network visits_default Created 
+ Container visits-db-1 Creating 
+ Container visits-web-1 Creating 
+ Container visits-web-1 Created 
+ Container visits-db-1 Created 
+ Container visits-db-1 Starting 
+ Container visits-web-1 Starting 
+ Container visits-db-1 Started 
+ Container visits-web-1 Started 

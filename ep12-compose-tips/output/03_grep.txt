@@ -1,0 +1,2 @@
+user@PC:~$ grep -n _exit app.py
+15:            os._exit(1)  # crash on purpose

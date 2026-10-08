@@ -1,0 +1,2 @@
+user@PC:~$ docker inspect -f '{{.RestartCount}}' visits-web-1
+1

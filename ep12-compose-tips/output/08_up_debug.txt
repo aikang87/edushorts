@@ -1,0 +1,7 @@
+user@PC:~$ docker compose --profile debug up -d
+ Container visits-db-1 Running 
+ Container visits-web-1 Running 
+ Container visits-cli-1 Creating 
+ Container visits-cli-1 Created 
+ Container visits-cli-1 Starting 
+ Container visits-cli-1 Started 

@@ -1,0 +1,2 @@
+user@PC:~$ curl localhost:8000/crash
+curl: (52) Empty reply from server

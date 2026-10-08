@@ -1,0 +1,4 @@
+user@PC:~$ docker stats --no-stream
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O       BLOCK I/O   PIDS
+d7adab42c50a   visits-db-1    0.19%     5.691MiB / 15.72GiB   0.04%     348B / 126B   0B / 0B     6
+5cdab0579857   visits-web-1   0.02%     10.1MiB / 128MiB      7.89%     0B / 126B     0B / 0B     1

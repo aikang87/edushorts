@@ -1,0 +1,5 @@
+user@PC:~$ docker compose ps
+NAME           IMAGE          COMMAND                  SERVICE   CREATED          STATUS          PORTS
+visits-cli-1   redis:alpine   "docker-entrypoint.s…"   cli       3 seconds ago    Up 2 seconds    6379/tcp
+visits-db-1    redis:alpine   "docker-entrypoint.s…"   db        11 seconds ago   Up 11 seconds   6379/tcp
+visits-web-1   visits-web     "python app.py"          web       11 seconds ago   Up 7 seconds    0.0.0.0:8000->8000/tcp

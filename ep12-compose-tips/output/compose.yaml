@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    mem_limit: 128m
+    cpus: 0.5
+    ports:
+      - "8000:8000"
+  db:
+    image: redis:alpine
+    restart: unless-stopped
+  cli:
+    image: redis:alpine
+    command: ["sleep", "infinity"]
+    profiles: ["debug"]
