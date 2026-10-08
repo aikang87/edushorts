@@ -1,0 +1,3 @@
+user@PC:~$ docker rmi cache-demo
+Untagged: cache-demo:latest
+Deleted: sha256:9214b72b9ad277e179ef2d7c12da6a05ecc0f0a034b401d01d51e4b022f6ec95

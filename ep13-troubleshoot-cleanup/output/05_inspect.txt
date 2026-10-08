@@ -1,0 +1,2 @@
+user@PC:~$ docker inspect -f '{{.State.ExitCode}}' broken
+1

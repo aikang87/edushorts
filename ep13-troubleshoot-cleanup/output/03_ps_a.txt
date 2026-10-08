@@ -1,0 +1,3 @@
+user@PC:~$ docker ps -a
+CONTAINER ID   IMAGE                COMMAND                  CREATED         STATUS                     PORTS     NAMES
+d651338dea2e   python:3.12-alpine   "python -c 'import n…"   2 seconds ago   Exited (1) 2 seconds ago             broken

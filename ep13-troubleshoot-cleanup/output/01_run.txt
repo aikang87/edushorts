@@ -1,0 +1,2 @@
+user@PC:~$ docker run -d --name broken python:3.12-alpine python -c "import notamodule"
+d651338dea2e65c99ef280da2b917f9bd6aa72f1e323b8d99b7a0068a6ce69e7
