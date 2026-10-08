@@ -1,0 +1,4 @@
+user@PC:~$ ls
+Dockerfile
+app.py
+secret.txt

@@ -1,0 +1,2 @@
+user@PC:~$ docker run --rm myapp
+Hello from Docker!

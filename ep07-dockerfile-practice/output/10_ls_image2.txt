@@ -1,0 +1,3 @@
+user@PC:~$ docker run --rm myapp ls
+Dockerfile
+app.py

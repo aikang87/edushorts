@@ -1,0 +1,40 @@
+user@PC:~$ docker build -t myapp .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 108B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-alpine
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 85B done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.12-alpine@sha256:1b668429b3511ab407d8e00648891631b0b1a4d7e15e3ca70f38ab5b91ad4ab4
+#5 resolve docker.io/library/python:3.12-alpine@sha256:1b668429b3511ab407d8e00648891631b0b1a4d7e15e3ca70f38ab5b91ad4ab4 0.0s done
+#5 DONE 0.0s
+
+#6 [2/3] WORKDIR /app
+#6 CACHED
+
+#7 [3/3] COPY . .
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 exporting manifest sha256:7f0b6554e1bdc4a8513e54cbc938fb66d0ae85ec4c723e16ae8dc569f7e2c238 done
+#8 exporting config sha256:cd176b0c53395979aa2d4dc7ee3d581af3d28a24c1d1afeb209ca35274d6efce done
+#8 exporting attestation manifest sha256:cdf0c8621b0b85db2ef6a316e5f32e065ffd2fc3d7c63536b4c9c9e9daf5b5b1 done
+#8 exporting manifest list sha256:bea5c8c398a68ef2d10745dba1d5a2795a2b4a735f86d9a7caf5cfc4d1f8c8fb done
+#8 naming to docker.io/library/myapp:latest done
+#8 unpacking to docker.io/library/myapp:latest done
+#8 DONE 0.1s
