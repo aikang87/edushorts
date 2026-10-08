@@ -1,0 +1,2 @@
+user@PC:~$ docker run -d -p 5000:5000 --name registry registry:2
+e2af1315777009d032c371b8fc7a22b79987c66d36b45ee56fe10ad2fac7d1a0

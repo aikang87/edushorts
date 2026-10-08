@@ -1,0 +1,4 @@
+user@PC:~$ docker rmi hello localhost:5000/hello:1.0
+Untagged: hello:latest
+Untagged: localhost:5000/hello:1.0
+Deleted: sha256:9ebcfd30f557246453580f4a9e96f07cdaab48a8461cc5b0d441607018bba267

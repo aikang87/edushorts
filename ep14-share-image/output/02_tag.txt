@@ -1,0 +1,1 @@
+user@PC:~$ docker tag hello localhost:5000/hello:1.0

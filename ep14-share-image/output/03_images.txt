@@ -1,0 +1,9 @@
+user@PC:~$ docker images
+IMAGE                      ID             DISK USAGE   CONTENT SIZE   EXTRA
+alpine:latest              294b683cb724         13MB         3.94MB        
+hello:latest               9ebcfd30f557       12.9MB         3.85MB        
+localhost:5000/hello:1.0   9ebcfd30f557       12.9MB         3.85MB        
+nginx:alpine               df221db836e1       94.4MB         27.2MB        
+python:3.12-alpine         1b668429b351       83.6MB         21.3MB        
+redis:alpine               3811787313eb        161MB         39.6MB        
+registry:2                 a3d8aaa63ed8       37.4MB         10.3MB   U    
