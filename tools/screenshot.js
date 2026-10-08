@@ -7,6 +7,7 @@ const exe = ["/opt/pw-browsers/chromium", ...fs.readdirSync("/opt/pw-browsers").
   const browser = await chromium.launch(exe ? { executablePath: exe } : {});
   const page = await browser.newPage({ viewport: { width: +w, height: +h }, deviceScaleFactor: +scale });
   await page.goto(url);
+  if (process.env.SCREENSHOT_WAIT_MS) await page.waitForTimeout(+process.env.SCREENSHOT_WAIT_MS); // JupyterLab 같이 늦게 그려지는 화면용
   await page.screenshot({ path: out });
   await browser.close();
   console.log("saved", out);

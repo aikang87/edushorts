@@ -1,0 +1,2 @@
+user@PC:~/dockerlab$ docker run --rm -v "$PWD":/workspaces/dockerlab -w /workspaces/dockerlab python:3.12-slim python hello.py
+Hello from Dev Container!
