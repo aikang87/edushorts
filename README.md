@@ -7,7 +7,7 @@
 
 | # | 주제 | 폴더 | 상태 |
 |---|---|---|---|
-| 1 | Docker 설치와 첫 실행 | `ep01-docker-install` | 기존 (자료 자리만) |
+| 1 | Docker 설치와 첫 실행 | `ep01-docker-install` | 제작 완료 (Windows 설치 화면은 일러스트, 설치 확인/hello-world 는 실제 실행) |
 | 2 | 이미지와 컨테이너 | `ep02-image-container` | 제작 완료 |
 | 3 | 컨테이너 켜고 끄기 | `ep03-container-lifecycle` | 제작 완료 |
 | 4 | 웹서버 띄우기: 포트와 환경변수 | `ep04-web-server` | 제작 완료 |
@@ -51,8 +51,7 @@ node build.js                      # PPT + script.txt 생성 (실제 출력이 �
 ## 제작 환경 제약 (검증 범위에 영향)
 
 - 빌드 컨테이너 DNS 차단: `RUN apk add` 등은 그대로는 검증 불가. `RUN pip install` 은 `tools/verify-base.sh`(프록시 CA 가 든 로컬 기반 이미지) + `docker build --network host` 로 검증 (17회차, 문서 참고). 표준 라이브러리/네트워크 불필요 예제는 그대로 검증
-- Docker Hub 익명 요청 제한(100회/시간, 429)이 간헐적으로 발생 → 각 `commands.sh` 가 재시도. 가능하면 이미지를 미리 받아 두고 불필요한 build/pull 반복을 피할 것
+- Docker Hub 익명 요청 제한(100회/시간, 429)이 간헐적으로 발생(공용 IP 라 다른 사용 때문에도 소진됨) → 각 `commands.sh` 가 재시도. 가능하면 이미지를 미리 받아 두고 불필요한 build/pull 반복을 피할 것. 소진이 길어지면 데몬에 Docker Hub 공개 미러(`/etc/docker/daemon.json` 의 `registry-mirrors: ["https://mirror.gcr.io"]`)를 설정해 같은 명령/출력으로 받을 수 있음 (1회차 검증에 사용)
 - `ollama.com`, `registry.ollama.ai`, `huggingface.co`, VSCode 다운로드/마켓플레이스 접속 차단 → `ollama pull` 실행 불가(19~20회차는 Docker Hub 의 `ai/smollm2` GGUF 를 `ollama create` 로 등록해 검증), VSCode 실제 화면 캡처 불가(16회차 일러스트)
 - 회차 폴더의 `script.md` 에 각 회차의 검증 범위와 표시용 편집 내역이 있음
-- 1회차(`ep01-docker-install`)는 기존 콘텐츠 자리만 있음
 - 20회차는 원래 ComfyUI 계획이었으나 폐기하고 LLM(Ollama) 내용으로 변경
