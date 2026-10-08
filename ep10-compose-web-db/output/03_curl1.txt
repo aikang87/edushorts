@@ -1,0 +1,2 @@
+user@PC:~$ curl localhost:8000
+Visits: 1

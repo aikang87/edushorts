@@ -1,0 +1,2 @@
+user@PC:~$ grep -n create_connection app.py
+5:    s = socket.create_connection(("db", 6379))
