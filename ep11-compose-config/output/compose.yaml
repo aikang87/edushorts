@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    ports:
+      - "${WEB_PORT}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: redis:alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 5

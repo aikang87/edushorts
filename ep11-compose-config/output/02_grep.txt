@@ -1,0 +1,2 @@
+user@PC:~$ grep WEB_PORT compose.yaml
+      - "${WEB_PORT}:8000"

@@ -1,0 +1,2 @@
+user@PC:~$ cat .env
+WEB_PORT=8080
