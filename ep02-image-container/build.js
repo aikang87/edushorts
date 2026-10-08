@@ -23,7 +23,7 @@ const ps2 = L.pickColumns(L.readOut(out("06_ps2")).slice(1), ["CONTAINER ID", "I
   const s = L.baseSlide(pres, {
     title: L.SERIES_TITLE,
     caption: "이번 시간에는 Docker의 핵심, 이미지와 컨테이너를 알아봅니다.",
-    notes: "[0:00-0:06] 이번 시간에는 Docker의 핵심, 이미지와 컨테이너를 알아봅니다.",
+    notes: "이번 시간에는 Docker의 핵심, 이미지와 컨테이너를 알아봅니다.",
   });
   s.addShape("roundRect", { ...R.screen, rectRadius: 0.2, fill: { color: C.purple }, line: { color: C.pink, width: 1.5 }, objectName: "화면영역" });
   s.addText(TOPIC, { ...R.screen, fontFace: F.title, fontSize: 34, color: C.text, align: "center", valign: "middle", isTextBox: true, objectName: "회차주제" });
@@ -34,7 +34,7 @@ const ps2 = L.pickColumns(L.readOut(out("06_ps2")).slice(1), ["CONTAINER ID", "I
   const s = L.baseSlide(pres, {
     title: TOPIC_TITLE,
     caption: "이미지는 실행에 필요한 모든 것을 담은 설계도, 컨테이너는 그 이미지를 실행한 것입니다.",
-    notes: "[0:06-0:14] 이미지는 실행에 필요한 모든 것을 담은 설계도, 컨테이너는 그 이미지를 실행한 것입니다.",
+    notes: "이미지는 실행에 필요한 모든 것을 담은 설계도, 컨테이너는 그 이미지를 실행한 것입니다.",
   });
   const card = (y, fill, line, head, sub, name) => {
     s.addShape("roundRect", { x: 0.9, y, w: 3.8, h: 1.2, rectRadius: 0.15, fill: { color: fill }, line: { color: line, width: 1.5 }, objectName: name });
@@ -46,12 +46,30 @@ const ps2 = L.pickColumns(L.readOut(out("06_ps2")).slice(1), ["CONTAINER ID", "I
   card(4.65, C.greenDark, C.green, "컨테이너 (Container)", "실행 중인 앱", "컨테이너카드");
 }
 
+// 2-2) 같은 이미지는 어디서든 똑같이 실행
+{
+  const s = L.baseSlide(pres, {
+    title: TOPIC_TITLE,
+    caption: "이미지는 한 번 만들어 두면 어디서든 똑같이 실행할 수 있습니다.",
+    notes: "이미지는 한 번 만들어 두면 어디서든 똑같이 실행할 수 있습니다.",
+  });
+  s.addShape("roundRect", { x: 0.9, y: 2.6, w: 3.8, h: 1.0, rectRadius: 0.15, fill: { color: C.purple }, line: { color: C.pink, width: 1.5 }, objectName: "이미지카드" });
+  s.addText("이미지 (Image)", { x: 0.9, y: 2.6, w: 3.8, h: 1.0, fontFace: F.body, fontSize: 20, bold: true, color: C.text, align: "center", valign: "middle", margin: 0, isTextBox: true });
+  ["내 PC", "서버", "친구 PC"].forEach((name, i) => {
+    const x = 0.5 + i * 1.6;
+    s.addText("▼", { x, y: 3.75, w: 1.4, h: 0.45, fontFace: F.mono, fontSize: 14, bold: true, color: C.pink, align: "center", valign: "middle", margin: 0, isTextBox: true });
+    s.addShape("roundRect", { x, y: 4.35, w: 1.4, h: 1.4, rectRadius: 0.12, fill: { color: C.greenDark }, line: { color: C.green, width: 1.5 }, objectName: "컨테이너카드" + (i + 1) });
+    s.addText([{ text: "컨테이너", options: { fontSize: 13, bold: true, breakLine: true } }, { text: name, options: { fontSize: 14 } }],
+      { x, y: 4.35, w: 1.4, h: 1.4, fontFace: F.body, color: C.text, align: "center", valign: "middle", margin: 0.03, isTextBox: true });
+  });
+}
+
 // 3) pull 명령
 {
   const s = L.baseSlide(pres, {
     title: TOPIC_TITLE,
     caption: "docker pull 명령으로 Docker Hub에서 nginx 이미지를 내려받습니다.",
-    notes: "[0:14-0:20] docker pull 명령으로 Docker Hub에서 nginx 이미지를 내려받습니다.",
+    notes: "docker pull 명령으로 Docker Hub에서 nginx 이미지를 내려받습니다.",
   });
   L.terminal(s, { lines: [{ t: pull[0], hl: true }], label: "이미지 내려받기: docker pull", fontSize: 14 });
 }
@@ -61,7 +79,7 @@ const ps2 = L.pickColumns(L.readOut(out("06_ps2")).slice(1), ["CONTAINER ID", "I
   const s = L.baseSlide(pres, {
     title: TOPIC_TITLE,
     caption: "마지막에 Downloaded 메시지가 나오면 내려받기가 끝난 것입니다.",
-    notes: "[0:20-0:26] 마지막에 Downloaded 메시지가 나오면 내려받기가 끝난 것입니다. (화면은 긴 진행 출력의 일부만 표시)",
+    notes: "마지막에 Downloaded 메시지가 나오면 내려받기가 끝난 것입니다. (화면은 긴 진행 출력의 일부만 표시)",
   });
   L.terminal(s, {
     lines: pullView.map((t, i) => ({ t, dim: t === "...", hl: i === pullView.length - 1 })),
@@ -74,7 +92,7 @@ const ps2 = L.pickColumns(L.readOut(out("06_ps2")).slice(1), ["CONTAINER ID", "I
   const s = L.baseSlide(pres, {
     title: TOPIC_TITLE,
     caption: "docker images로 내려받은 이미지를 확인합니다.",
-    notes: "[0:26-0:32] docker images로 내려받은 이미지를 확인합니다.",
+    notes: "docker images로 내려받은 이미지를 확인합니다.",
   });
   L.terminal(s, {
     lines: [{ t: P + "docker images", hl: false }, ...images.map((t, i) => ({ t, dim: i === 0, hl: i === 1 }))],
@@ -87,7 +105,7 @@ const ps2 = L.pickColumns(L.readOut(out("06_ps2")).slice(1), ["CONTAINER ID", "I
   const s = L.baseSlide(pres, {
     title: TOPIC_TITLE,
     caption: "docker run으로 이미지를 컨테이너로 실행합니다. -d는 백그라운드, --name은 이름입니다.",
-    notes: "[0:32-0:40] docker run으로 이미지를 컨테이너로 실행합니다. -d는 백그라운드 실행, --name은 컨테이너 이름입니다. (컨테이너 ID는 앞부분만 표시)",
+    notes: "docker run으로 이미지를 컨테이너로 실행합니다. -d는 백그라운드 실행, --name은 컨테이너 이름입니다. (컨테이너 ID는 앞부분만 표시)",
   });
   L.terminal(s, { lines: [{ t: run1[0], hl: true }, { t: L.trunc(run1[1], 40) }], label: "컨테이너 실행: docker run", fontSize: 11 });
 }
@@ -97,11 +115,25 @@ const ps2 = L.pickColumns(L.readOut(out("06_ps2")).slice(1), ["CONTAINER ID", "I
   const s = L.baseSlide(pres, {
     title: TOPIC_TITLE,
     caption: "docker ps로 실행 중인 컨테이너를 확인합니다. Up이면 실행 중입니다.",
-    notes: "[0:40-0:46] docker ps로 실행 중인 컨테이너를 확인합니다. Up이면 실행 중입니다. (일부 열 생략)",
+    notes: "docker ps로 실행 중인 컨테이너를 확인합니다. Up이면 실행 중입니다. (일부 열 생략)",
   });
   L.terminal(s, {
     lines: [{ t: P + "docker ps" }, ...ps1.map((t, i) => ({ t, dim: i === 0, hl: i === 1 }))],
     label: "실행 중인 컨테이너: docker ps", tone: "green", fontSize: 11,
+  });
+}
+
+// 7-2) ps 결과의 NAMES 열
+{
+  const s = L.baseSlide(pres, {
+    title: TOPIC_TITLE,
+    caption: "NAMES 열에서 컨테이너 이름을 확인할 수 있습니다.",
+    notes: "NAMES 열에서 컨테이너 이름을 확인할 수 있습니다. (일부 열 생략)",
+  });
+  const col = ps1[0].indexOf("NAMES"), end = ps1[1].length;
+  L.terminal(s, {
+    lines: [{ t: P + "docker ps" }, { t: ps1[0], dim: true, hlCols: [col, col + 5] }, { t: ps1[1], hlCols: [col, end] }],
+    label: "컨테이너 이름: NAMES", tone: "green", fontSize: 11,
   });
 }
 
@@ -110,7 +142,7 @@ const ps2 = L.pickColumns(L.readOut(out("06_ps2")).slice(1), ["CONTAINER ID", "I
   const s = L.baseSlide(pres, {
     title: TOPIC_TITLE,
     caption: "같은 이미지로 컨테이너를 여러 개 실행할 수도 있습니다.",
-    notes: "[0:46-0:52] 같은 이미지로 컨테이너를 여러 개 실행할 수도 있습니다. (일부 열 생략)",
+    notes: "같은 이미지로 컨테이너를 여러 개 실행할 수도 있습니다. (일부 열 생략)",
   });
   L.terminal(s, {
     lines: [{ t: run2[0], hl: true }, { t: L.trunc(run2[1], 40) }, { t: P + "docker ps" },
@@ -124,7 +156,7 @@ const ps2 = L.pickColumns(L.readOut(out("06_ps2")).slice(1), ["CONTAINER ID", "I
   const s = L.baseSlide(pres, {
     title: TOPIC_TITLE,
     caption: "pull로 받고, images로 확인하고, run으로 실행하고, ps로 확인합니다.",
-    notes: "[0:52-0:57] 정리합니다. pull로 받고, images로 확인하고, run으로 실행하고, ps로 확인합니다.",
+    notes: "정리합니다. pull로 받고, images로 확인하고, run으로 실행하고, ps로 확인합니다.",
   });
   const rows = [["docker pull", "이미지 내려받기"], ["docker images", "이미지 목록 보기"], ["docker run", "컨테이너 실행"], ["docker ps", "실행 중인 컨테이너 보기"]];
   rows.forEach(([cmd, desc], i) => {
@@ -140,7 +172,7 @@ const ps2 = L.pickColumns(L.readOut(out("06_ps2")).slice(1), ["CONTAINER ID", "I
   const s = L.baseSlide(pres, {
     title: TOPIC_TITLE,
     caption: "다음 시간에는 컨테이너를 켜고 끄는 방법을 알아봅니다.",
-    notes: "[0:57-1:00] 다음 시간에는 컨테이너를 켜고 끄는 방법을 알아봅니다.",
+    notes: "다음 시간에는 컨테이너를 켜고 끄는 방법을 알아봅니다.",
   });
   s.addShape("roundRect", { ...R.screen, rectRadius: 0.2, fill: { color: C.purple }, line: { color: C.pink, width: 1.5 }, objectName: "화면영역" });
   s.addText([{ text: "NEXT", options: { fontFace: F.mono, fontSize: 16, bold: true, color: C.pink, breakLine: true } },

@@ -59,6 +59,10 @@ function terminal(s, { lines, label, tone = "pink", tab = "terminal", fontSize =
       ? [{ text: m[1], options: { color: C.green, bold: true } }, { text: m[2], options: { color: C.text } }]
       : [{ text: ln.t, options: { color: ln.dim ? C.dim : C.text } }];
     s.addText(runs, { x: tx, y, w: tw, h: lh, fontFace: F.mono, fontSize, valign: "middle", margin: 0, wrap: false, isTextBox: true, objectName: "터미널줄" + (i + 1) });
+    if (ln.hlCols) {
+      const cw = (fontSize * 0.6) / 72; // Courier New 글자폭
+      s.addShape("roundRect", { x: tx + ln.hlCols[0] * cw - 0.05, y: y - 0.01, w: (ln.hlCols[1] - ln.hlCols[0]) * cw + 0.1, h: lh + 0.02, rectRadius: 0.05, fill: { color: C.term, transparency: 100 }, line: { color: hlColor, width: 1.75 }, objectName: "강조열" });
+    }
     if (ln.hl) s.addShape("roundRect", { x: bx + 0.07, y: y - 0.01, w: bw - 0.14, h: lh + 0.02, rectRadius: 0.05, fill: { color: C.term, transparency: 100 }, line: { color: hlColor, width: 1.75 }, objectName: "강조" });
   });
   s.addShape("roundRect", { x: bx, y: 5.64, w: bw, h: 0.42, rectRadius: 0.06, fill: { color: stripColor }, line: { color: stripColor, width: 0.5 }, objectName: "설명라벨" });
