@@ -1,0 +1,4 @@
+user@PC:~$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS     NAMES
+79e4073fcb97   nginx:alpine   "/docker-entrypoint.…"   2 seconds ago   Up 2 seconds   80/tcp    web2
+6f360068836a   nginx:alpine   "/docker-entrypoint.…"   6 seconds ago   Up 5 seconds   80/tcp    web

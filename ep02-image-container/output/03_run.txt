@@ -1,0 +1,2 @@
+user@PC:~$ docker run -d --name web nginx:alpine
+6f360068836a220770786a07896c5926b9db92888742f2cc1b7fe5bcb5de8902
