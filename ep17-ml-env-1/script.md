@@ -5,7 +5,7 @@
 - 예상 길이: 낭독 약 60초 (기준: 36자 = 6.7초), 문장 사이 쉼 포함 약 63~65초
 - 화면의 명령어/출력은 `commands.sh` 를 실제 실행한 결과(`output/*.txt`), 화면의 `Dockerfile`/`train.py` 는 실제 빌드/실행에 쓴 파일(`output/`), 브라우저 화면은 실제 Chromium 으로 캡처한 JupyterLab(`output/browser.png`)
 - 구성: `python:3.12-slim` + `pip install numpy pandas scikit-learn jupyterlab`, 코드는 내 폴더(`~/mlenv`)를 `-v` 로 연결, JupyterLab 은 `-p 8888:8888`. 붓꽃(iris) 데이터는 scikit-learn 내장이라 별도 다운로드 없음
-- 마지막 슬라이드는 18회차(기존 콘텐츠) 예고 — 18회차의 실제 주제에 맞게 문구를 바꿔 주세요
+- 마지막 슬라이드는 18회차(ML 개발환경 ②: requirements.txt + Compose + .env) 예고
 
 ## 제작 환경 우회 (학습자와 다른 점, 영상/슬라이드에는 나오지 않음)
 

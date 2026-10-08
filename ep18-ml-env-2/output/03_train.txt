@@ -1,0 +1,4 @@
+user@PC:~$ docker compose run --rm lab python train.py
+ Container mlenv2-lab-run-e37417aa7591 Creating
+ Container mlenv2-lab-run-e37417aa7591 Created
+accuracy: 0.974

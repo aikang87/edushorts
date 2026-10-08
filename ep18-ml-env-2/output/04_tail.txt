@@ -1,0 +1,4 @@
+user@PC:~$ tail -n 3 train.py
+os.makedirs("models", exist_ok=True)
+joblib.dump(clf, "models/iris.joblib")
+print("accuracy:", round(clf.score(Xte, yte), 3))

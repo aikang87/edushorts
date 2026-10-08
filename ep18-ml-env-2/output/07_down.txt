@@ -1,0 +1,7 @@
+user@PC:~$ docker compose down
+ Container mlenv2-lab-1 Stopping
+ Container mlenv2-lab-1 Stopped
+ Container mlenv2-lab-1 Removing
+ Container mlenv2-lab-1 Removed
+ Network mlenv2_default Removing
+ Network mlenv2_default Removed

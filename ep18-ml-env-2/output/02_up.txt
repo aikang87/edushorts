@@ -1,0 +1,7 @@
+user@PC:~$ docker compose up -d
+ Network mlenv2_default Creating
+ Network mlenv2_default Created
+ Container mlenv2-lab-1 Creating
+ Container mlenv2-lab-1 Created
+ Container mlenv2-lab-1 Starting
+ Container mlenv2-lab-1 Started

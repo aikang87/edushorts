@@ -1,0 +1,11 @@
+services:
+  lab:
+    build: .
+    ports:
+      - "${LAB_PORT}:8888"
+    volumes:
+      - .:/work
+    environment:
+      - JUPYTER_TOKEN=${LAB_TOKEN}
+    restart: unless-stopped
+    mem_limit: 2g
