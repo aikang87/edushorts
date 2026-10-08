@@ -1,0 +1,14 @@
+user@PC:~$ docker exec ollama ollama create smol -f /models/Modelfile
+gathering model components ⠙ gathering model components ⠹ gathering model components
+copying file sha256:bf6f20a603055433b4b998119e17928fc4a89b35c42855dd7eada105058cae0a 0% ⠋ gathering model components
+copying file sha256:bf6f20a603055433b4b998119e17928fc4a89b35c42855dd7eada105058cae0a 33% ⠙ gathering model components
+copying file sha256:bf6f20a603055433b4b998119e17928fc4a89b35c42855dd7eada105058cae0a 68% ⠹ gathering model components
+copying file sha256:bf6f20a603055433b4b998119e17928fc4a89b35c42855dd7eada105058cae0a 87% ⠸ gathering model components
+copying file sha256:bf6f20a603055433b4b998119e17928fc4a89b35c42855dd7eada105058cae0a 100%
+parsing GGUF
+using existing layer sha256:bf6f20a603055433b4b998119e17928fc4a89b35c42855dd7eada105058cae0a
+using autodetected template chatml
+creating new layer sha256:4b12d6a2e35bd7a2ccf99689c0b002e668d34b58af5b8dbc26cf01da6156003f
+creating new layer sha256:5413f21bab80781fcd5a59ec1058592ed63ecce859b9a00d9a4b3c4cca5902af
+writing manifest
+success

@@ -1,0 +1,2 @@
+user@PC:~$ docker run -d -v ollama:/root/.ollama -v ~/models:/models -p 11434:11434 --name ollama ollama/ollama
+e566d24b0d0a9231578a621cc7f28a29fa6f18450759f46b2f369286d2d3437f

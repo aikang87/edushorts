@@ -1,0 +1,15 @@
+user@PC:~$ docker exec ollama ollama show smol
+  Model
+    architecture        llama
+    parameters          361.82M
+    context length      8192
+    embedding length    960
+    quantization        Q4_K_M
+  Capabilities
+    completion
+  Parameters
+    stop           "<|im_start|>"
+    stop           "<|im_end|>"
+    temperature    0
+  System
+    You are a helpful assistant. Answer briefly.

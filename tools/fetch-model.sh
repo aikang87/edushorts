@@ -14,5 +14,6 @@ fi
 cat > "$DEST/Modelfile" <<'MF'
 FROM /models/smollm2.gguf
 SYSTEM You are a helpful assistant. Answer briefly.
+PARAMETER temperature 0
 MF
 echo "모델 준비됨: $DEST/smollm2.gguf ($(du -h "$DEST/smollm2.gguf" | cut -f1)), $DEST/Modelfile"

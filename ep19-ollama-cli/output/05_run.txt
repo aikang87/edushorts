@@ -1,0 +1,2 @@
+user@PC:~$ docker exec ollama ollama run smol "What is Docker? Answer in one short sentence."
+Docker is a containerization platform that allows developers to package, ship, and run applications in isolated environments.

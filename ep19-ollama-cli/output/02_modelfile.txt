@@ -1,0 +1,4 @@
+user@PC:~$ cat ~/models/Modelfile
+FROM /models/smollm2.gguf
+SYSTEM You are a helpful assistant. Answer briefly.
+PARAMETER temperature 0
