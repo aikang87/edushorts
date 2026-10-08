@@ -1,0 +1,4 @@
+user@PC:~$ docker logs lab
+[I 2026-10-08 09:11:53.558 ServerApp] Jupyter Server 2.21.1 is running at:
+[I 2026-10-08 09:11:53.558 ServerApp]     http://127.0.0.1:8888/lab?token=e101121efd439a3672a10a9a8301d5a8ab9b1adb16f3a3b5
+        http://127.0.0.1:8888/lab?token=e101121efd439a3672a10a9a8301d5a8ab9b1adb16f3a3b5

@@ -1,0 +1,2 @@
+user@PC:~$ docker run -d --name lab -p 8888:8888 -v "$PWD":/work ml-env
+c80af12725786143f923a3dcda1737bf4a00c36af6f3c70163f63f00ddca622a

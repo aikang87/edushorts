@@ -1,0 +1,2 @@
+user@PC:~$ docker run --rm -v "$PWD":/work ml-env python train.py
+accuracy: 0.974

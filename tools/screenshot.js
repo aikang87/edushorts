@@ -8,6 +8,9 @@ const exe = ["/opt/pw-browsers/chromium", ...fs.readdirSync("/opt/pw-browsers").
   const page = await browser.newPage({ viewport: { width: +w, height: +h }, deviceScaleFactor: +scale });
   await page.goto(url);
   if (process.env.SCREENSHOT_WAIT_MS) await page.waitForTimeout(+process.env.SCREENSHOT_WAIT_MS); // JupyterLab 같이 늦게 그려지는 화면용
+  if (process.env.SCREENSHOT_DISMISS) { // 알림 팝업 등의 버튼 이름(예: "No")이 있으면 눌러서 닫음 (없으면 무시)
+    try { await page.getByRole("button", { name: process.env.SCREENSHOT_DISMISS, exact: true }).click({ timeout: 2000 }); await page.waitForTimeout(500); } catch (e) { /* 없으면 그대로 진행 */ }
+  }
   await page.screenshot({ path: out });
   await browser.close();
   console.log("saved", out);
