@@ -1,0 +1,2 @@
+user@PC:~$ docker run --rm hello-multi
+Hello from Go!

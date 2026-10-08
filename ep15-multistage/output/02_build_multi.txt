@@ -1,0 +1,50 @@
+user@PC:~$ docker build -t hello-multi .
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 194B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/golang:1.22-alpine
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/alpine:latest
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [stage-1 1/2] FROM docker.io/library/alpine:latest@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6
+#5 resolve docker.io/library/alpine:latest@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6 0.0s done
+#5 DONE 0.0s
+
+#6 [build 1/4] FROM docker.io/library/golang:1.22-alpine@sha256:1699c10032ca2582ec89a24a1312d986a3f094aed3d5c1147b19880afe40e052
+#6 resolve docker.io/library/golang:1.22-alpine@sha256:1699c10032ca2582ec89a24a1312d986a3f094aed3d5c1147b19880afe40e052 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 28B done
+#7 DONE 0.0s
+
+#8 [build 2/4] WORKDIR /src
+#8 CACHED
+
+#9 [build 3/4] COPY main.go .
+#9 CACHED
+
+#10 [build 4/4] RUN go build -o hello main.go
+#10 CACHED
+
+#11 [stage-1 2/2] COPY --from=build /src/hello /hello
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:bac4a432eb56b6beca67a3aa8ae337672b7ad1ab5c7e535a43f5f658d29f5ca3 done
+#12 exporting config sha256:7675c30a29216ead4dadd2155ed6c5d7f19c33d3a165d512bbf5b56258892233 done
+#12 exporting attestation manifest sha256:f12fa6f4aeaf400a232ca782d03b86640c4f98d35699f1bcad985a2778e9c6d2 done
+#12 exporting manifest list sha256:511f8f2f2445d24b5f2076834b6a9f2661627120d6961a978277a5f548b05bdd done
+#12 naming to docker.io/library/hello-multi:latest done
+#12 unpacking to docker.io/library/hello-multi:latest 0.0s done
+#12 DONE 0.1s

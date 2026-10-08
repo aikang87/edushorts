@@ -1,0 +1,10 @@
+user@PC:~$ docker images
+IMAGE                 ID             DISK USAGE   CONTENT SIZE   EXTRA
+alpine:latest         294b683cb724         13MB         3.94MB        
+golang:1.22-alpine    1699c10032ca        349MB         73.5MB        
+hello-multi:latest    511f8f2f2445         16MB         5.02MB        
+hello-single:latest   2cad04a310df        387MB         80.8MB        
+nginx:alpine          df221db836e1       94.4MB         27.2MB        
+python:3.12-alpine    1b668429b351       83.6MB         21.3MB        
+redis:alpine          3811787313eb        161MB         39.6MB        
+registry:2            a3d8aaa63ed8       37.4MB         10.3MB        
