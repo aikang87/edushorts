@@ -1,5 +1,7 @@
 # Docker 교육 쇼츠 (VSCode와 Docker로 만드는 생성형AI)
 
+과정 개요(필요성, 특성, 학습 목표): [COURSE_OVERVIEW.md](COURSE_OVERVIEW.md)
+
 1분 쇼츠 20회차. 슬라이드(PPT) 한 장 = 영상 한 컷. 슬라이드를 이미지로 내보내 영상 편집에 사용합니다.
 기준 환경: Windows + WSL(Ubuntu), GPU 없음(GPU 환경은 추가 설명만), 대상은 완전 초보자.
 
